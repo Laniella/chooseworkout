@@ -31,12 +31,16 @@ adict = {
 	"26_fb_L_l"  : "watch?v=tTl6MgjL2E8",
 	"27_fb_L_l"  : "watch?v=UgcwcPmhmb0",
 	"28_fb_L_l"  : "watch?v=vYV6wt7U4nI",
-	"29_fb_L_x"    : "watch?v=PBHBhvv-Lhg",
-	"30_fb_L_x"    : "watch?v=jLi5CcyTFgQ",
+	"29_fb_L_x"  : "watch?v=PBHBhvv-Lhg",
+	"30_fb_L_x"  : "watch?v=jLi5CcyTFgQ",
 	"31_fb_L_l"  : "watch?v=-_yK_PDR8mc",
 	"32_fb_L_l"  : "watch?v=11JXbBBgfWg",
 	"33_fb_L_lc" : "watch?v=EWoxVdAd-HI",
 	"34_fb_L_l"  : "watch?v=LTJesxB1aZY",
+	"35_fb_L_tc" : "watch?v=Cn8Elmw16ZU",
+	"36_fb_L_tc" : "watch?v=E_J6CntJXyQ&t",
+	"37_fb_L_lc" : "watch?v=tMB_ehaXtbI",
+	"38_fb_L_tc" : "watch?v=hMMLmNvUT0Q",
 	"01_fb_S_tc" : "watch?v=rzoqO3ENKNk",
 	"02_fb_S_a"  : "watch?v=nBFdBnIbZRo",
 	"03_fb_S_ac" : "watch?v=sCw3xdmoxHQ",
@@ -45,10 +49,10 @@ adict = {
 	"06_fb_S_u"  : "watch?v=xRt4LSANIoU",
 	"07_fb_S_a"  : "watch?v=0CQ7riVMNJc",
 	"08_fb_S_l"  : "watch?v=C8X96ItgyOg",
-	"09_fb_S_w"    : "watch?v=R0mMyV5OtcM",
-	"10_fb_S_w"    : "watch?v=Ie4ZTuMh_K0",
-	"11_fb_S_w"    : "watch?v=ERdZqyorGfk",
-	"12_fb_S_w"    : "watch?v=hsGgI0ThLG8"
+	"09_fb_S_w"  : "watch?v=R0mMyV5OtcM",
+	"10_fb_S_w"  : "watch?v=Ie4ZTuMh_K0",
+	"11_fb_S_w"  : "watch?v=ERdZqyorGfk",
+	"12_fb_S_w"  : "watch?v=hsGgI0ThLG8"
 }
 			 
 dictkey = "w: warm up, a: abs, u: upper, l: lower, t:total, c: cardio"
@@ -58,14 +62,15 @@ def preface():
 	print 'What kind of workout for the day?'
 	print dictkey
 	while 1:
-		type = raw_input('>')
+		type = raw_input('> ')
 		if all([x in 'waultc' for x in type]):
 			break
 	
 	print 'anything you don\'t want to do?'
+	print 'type \'n\' for nothing'
 	print dictkey
 	while 1:
-		ew = raw_input('>')
+		ew = raw_input('> ')
 		if ew[0].lower() == 'n':
 			ew = 'n'
 			break
@@ -77,7 +82,7 @@ def preface():
 	print '(Warm up videos are short)'
 	
 	while 1:
-		length = raw_input('>')
+		length = raw_input('> ')
 		length = length[0].upper()
 		if length == 'L' or length == 'S':
 			break
